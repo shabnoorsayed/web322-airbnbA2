@@ -1,0 +1,145 @@
+body {
+  background-image: url("dark-dark-woods4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#logo {
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-top: 3%;
+}
+
+header {
+  background-color: #0C0625;
+  border-radius: 25px;
+  margin: 3%;
+  padding-right: 3%;
+}
+
+#head {
+  display: grid;
+  grid-template-columns: 10fr 0.5fr;
+}
+.nav {
+  display: inline-block;
+  padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  font-size: 1.5vw;
+  font-family: inherit;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 3%;
+}
+.nav:hover {
+  border-bottom: 0.03rem solid white;
+}
+#navGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#home {
+  color: white;
+  padding-left: 2%;
+}
+
+.promotion {
+  background-color: white;
+  text-align: center;
+  margin-top: 3%;
+  opacity: 0.9;
+  color: red;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 1.5vw;
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-top: 3%;
+  padding-left: 9%;
+  padding-right: 10%;
+}
+
+.about_img {
+  max-width: 250%;
+  height: auto;
+}
+
+.info {
+  background-color: white;
+  z-index: -1;
+  margin-left: 50%;
+  padding-left: 1%;
+  padding-top: 5%;
+  font-size: 1.3vw;
+  line-height: 1.66667;
+  opacity: 0.8;
+  color: black;
+}
+#quick-links {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  padding-left: 3%;
+  padding-top: 5%;
+  padding-bottom: 0%;
+}
+.links {
+  color: white;
+  text-align: center;
+}
+.room {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1%;
+}
+.roomPicture {
+  padding: 3%;
+  margin: 5%;
+  border-radius: 25px;
+  background-color: white;
+  opacity: 0.9;
+}
+.roomPicture img {
+  max-width: 90%;
+  height: auto;
+  padding-top: 8%;
+}
+
+.footer {
+   background-color: #0C0625;
+   margin-top: 5%;
+   opacity: 0.9;
+   text-align: center;
+   font-size: 1.1vw;
+}
+.signup-form {
+  align-content: center;
+  padding-left: 5%;
+  color: white;
+}
+.signup-form h3 {
+  text-align: center;
+  padding-bottom: 5%;
+}
+.login-form {
+  display: inline-block;
+  padding-left: 45%;
+  color: white;
+}
+.login-form h3 {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.welcome {
+
+  padding-left: 5%;
+  margin-bottom: 10%;
+}
