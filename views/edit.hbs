@@ -1,0 +1,31 @@
+<form class="edit-form" method="POST" action="/edit/{{._id}}/?_method=PUT" enctype="multipart/form-data">
+     <div class="form-row">
+        <div class="form-group col-md-4">
+        <label>Title</label>
+        <input type="text" name="title" id="title" value="{{.title}}"> <br><br>
+        <label>location</label>
+        <select name=location >
+            <option value="Montreal">Montreal</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Calgary">Calgary</option>
+            <option value="Toronto">Toronto</option>
+        </select> <br><br>
+
+        <label>Price</label>
+        <input type="number" name="price" id="price" value="{{.price}}"> <br><br>
+
+        <label>Description</label>
+        <input type="text" id="description" name="description" value="{{.description}}"><br><br>
+
+        <input type="file" name="profile_pic" >
+       
+        <input type="submit" value="Update Room">
+
+         <div class="login_error">
+            {{#each message}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        </div>
+    </div>
+</form>

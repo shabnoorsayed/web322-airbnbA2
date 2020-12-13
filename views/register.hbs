@@ -9,9 +9,6 @@
           <label>Last Name *</label>
           <input value="{{values.lastName}}" id="lastName" type="text" name="lastName" class="form-control"
             placeholder="Please enter your Last Name" />
-          {{#if validation.lastName}}
-          <span style="color: red;">{{ validation.lastName }}</span><br />
-          {{/if}}
         </div>
       </div>
       <div class="col-sm-4">
@@ -19,9 +16,6 @@
           <label>First Name *</label>
           <input value="{{values.firstName}}" class="form-control" placeholder="Please enter your First Name"
             id="firstName" type="text" name="firstName" />
-          {{#if validation.firstName}}
-          <span style="color: red;">{{ validation.firstName }}</span><br />
-          {{/if}}
         </div>
       </div>
     </div>
@@ -31,9 +25,6 @@
           <label for="exampleInputEmail1">Email address</label>
           <input value="{{values.email}}" type="email" name="email" class="form-control" id="exampleInputEmail1"
             aria-describedby="emailHelp" placeholder="Enter email">
-          {{#if validation.email}}
-          <span style="color: red;">{{ validation.email }}</span><br />
-          {{/if}}
         </div>
       </div>
       <div class="form-row">
@@ -41,9 +32,6 @@
           <label for="exampleInputPassword1">Password</label>
           <input value="{{values.password}}" type="password" name="password" class="form-control"
             id="exampleInputPassword1" placeholder="Password">
-          {{#if validation.password}}
-          <span style="color: red;">{{ validation.password }}</span><br />
-          {{/if}}
         </div>
       </div>
     </div>
@@ -51,15 +39,17 @@
       <div class="col-sem-4">
         <label for="exampleInputPassword1">Birth Date</label>
         <input type="date" value="{{values.birthdate}}" name="birthdate" class="form-control" id="Birthdate">
-        {{#if validation.birthdate}}
-        <span style="color: red;">{{ validation.birthdate }}</span><br />
-        {{/if}}
       </div>
     </div>
+    {{#each error}}
+    <span style="color: red;">
+    <div>{{this}}</div>
+    </span>
+    {{/each}}
     <span>We will send you marketing promotions, special offers and policy updates through email.</span>
   </div><br>
   <button type="submit" class="btn btn-info btn-send" value="Send message">
     Sign up
   </button>
-  <button class="btn btn-send" type="reset">Reset</button>
+  <button class="btn btn-info btn-send" type="reset">Reset</button>
 </form><br>

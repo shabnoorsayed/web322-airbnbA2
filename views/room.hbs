@@ -1,66 +1,33 @@
 <section>
     <div class="room">
+         {{#each lists}}
         <div class="roomPicture">
-            <ul>
-                <li><img src="/room1.png"></li>
-                <p>1 bedroom for single night</p>
-                <b><span>Lux village</span></b>
-                <p>$29.99</p>
-                <li class="book"><a href="register" class="btn btn-outline-info">Book Now</a></li><br>
-                <li class="show_more"><a href="register" class="btn btn-outline-info">More details</a></li>
-            </ul>
+           
+           
+            <div class="roomPicture">
+                <img class="room_img" src="/uploads/{{profile_pic}}" alt="Rooms">
+                <div class="room_des1">{{title }}</div>
+                <div class="room_des2">{{description}}</div>
+                <div class="room_des2">{{location}}</div>
+                <div class="room_des3"><span class="room_price">$ {{price}}</span>/night</div>
+                {{#if ../user}}
+
+                {{#if ../user.admin}}
+                <ul><a class="room_edit" href="/edit/{{_id}}">Edit</a></ul>
+                <ul><a class="room_back" href="/admin">Back to Administrator Page</a></ul>
+                {{else}}
+                <ul>
+                    <form method="GET" action="/booking/{{_id}}"><input type="submit" value="Book a room">
+                    </form>
+                </ul>
+                <br>
+                {{/if}}
+                {{else}}
+                <div><a class="room_edit" href="/login">Please log in</a></div>
+                {{/if}}
+            </div>
         </div>
-        <div class="roomPicture">
-            <ul>
-                <li><img src="/room2.png"></li>
-                <p>1 bedroom for single night</p>
-                <b><span>sea world</span></b>
-                <p>$29.99</p>
-                <li class="book"><a href="register" class="btn btn-outline-info">Book Now</a></li><br>
-                <li class="show_more"><a href="register" class="btn btn-outline-info">More details</a></li>
-            </ul>
-        </div>
-        <div class="roomPicture">
-            <ul>
-                <li><img src="/room3.png"></li>
-                <p>1 bedroom for single night</p>
-                <b><span>leaside residence</span></b>
-                <p>$39.99</p>
-                <li class="book"><a href="register" class="btn btn-outline-info">Book Now</a></li><br>
-                <li class="show_more"><a href="register" class="btn btn-outline-info">More details</a></li>
-            </ul>
-        </div>
+        {{/each}}
     </div>
-    <div class="room">
-        <div class="roomPicture">
-            <ul>
-                <li><img src="/room4.png"></li>
-                <p>1 bedroom for single night</p>
-                <b><span>Rose Garden</span></b>
-                <p>$49.99</p>
-                <li class="book"><a href="register" class="btn btn-outline-info">Book Now</a></li><br>
-                <li class="show_more"><a href="register" class="btn btn-outline-info">More details</a></li>
-            </ul>
-        </div>
-        <div class="roomPicture">
-            <ul>
-                <li><img src="/room5.png"></li>
-                <p>1 bedroom for single night</p>
-                <b><span>Pink villa</span></b>
-                <p>$79.99</p>
-                <li class="book"><a href="register" class="btn btn-outline-info">Book Now</a></li><br>
-                <li class="show_more"><a href="register" class="btn btn-outline-info">More details</a></li>
-            </ul>
-        </div>
-        <div class="roomPicture">
-            <ul>
-                <li><img src="/room6.png"></li>
-                <p>1 bedroom for single night</p>
-                <b><span>bnaff roofs</span></b>
-                <p>$99.99</p>
-                <li class="book"><a href="register" class="btn btn-outline-info">Book Now</a></li><br>
-                <li class="show_more"><a href="register" class="btn btn-outline-info">More details</a></li>
-            </ul>
-        </div>
     </div>
 </section>

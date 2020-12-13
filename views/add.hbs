@@ -1,0 +1,31 @@
+<form class="add-form"method="POST" action="/add" enctype="multipart/form-data">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+        <h2>Create A Room</h2>
+        <input type="text" name="title" id="title" placeholder="Title" style="color: black;"> <br><br>
+
+        <input type="number" name="price" min="1.00" id="price" placeholder="$ Price" style="color: black;">/ night <br><br>
+
+        <input type="text" name="description" id="description" placeholder="Description"style="color: black;"> <br><br>
+        
+        <select name=location style="color: black;">
+                <option >Anywhere</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Calgary">Calgary</option>
+                <option value="Toronto">Toronto</option>
+            </select> <br><br>
+
+        <input type="file" name="profile_pic"  id="profile_pic" multiple />
+        <br>
+        <input type="submit" value="Create A Room" class="btn btn-info btn-send">
+    </div>
+    </div>
+    {{#each error}}
+    <span style="color: red;">
+        <div>{{this}}</div>
+    </span>
+    {{/each}}
+    </form>
+
+   

@@ -1,0 +1,21 @@
+
+<div class="user-class">
+<div class="home_promo3">Welcome</div>
+<div class="user">Hi! {{user.firstname}} {{user.lastname}}</div>
+
+<div ><a  href="/room" class="user_title">Click here to check the room list</a></div>
+<div class="user_booked">Booked Rooms</div>
+<div class="room">
+{{#each bookedRooms}}
+    <div class="roomPicture" style="color: black;">
+                <img class="room_img" src="/uploads/{{profile_pic}}" alt="Rooms">
+                <div class="room_des1">{{title }}</div>
+                <div class="room_des2">{{description}}</div>
+                <div class="room_des2">{{location}}</div>
+                <div class="room_des3"><span class="room_price">$ {{price}}</span>/night</div>
+            </div>
+            {{/each}}
+            </div>
+  
+  </div>
+  </div>
